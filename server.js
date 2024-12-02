@@ -12,7 +12,7 @@ app.use("/app",routerUrl);
 
 if(mongoose.connect('mongodb://localhost:27017/Student-management'))
 {
-    console.log('Database is Connected')
+    console.log('DB is Connected')
 }
 
 app.listen(4000, ()=>
