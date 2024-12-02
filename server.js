@@ -10,10 +10,16 @@ app.use(express.json());
 app.use(cors());
 app.use("/app",routerUrl);
 
-if(mongoose.connect('mongodb://localhost:27017/Student-management'))
-{
-    console.log('DB is Connected')
-}
+mongoose.connect('mongodb://localhost:27017/Student-management', {
+    useNewUrlParser: true,       // Avoid deprecation warning for URL parsing
+    useUnifiedTopology: true     // Avoid deprecation warning for server discovery and monitoring
+})
+    .then(() => {
+        console.log('Database is Connected');
+    })
+    .catch((error) => {
+        console.error('Database Connection Failed:', error.message);
+    });
 
 app.listen(4000, ()=>
     {
