@@ -10,12 +10,12 @@ app.use(express.json());
 app.use(cors());
 app.use("/app",routerUrl);
 
-if(mongoose.connect('mongodb+srv://kvallarasu2003:Ammaakka@16@cluster0.izndm.mongodb.net/Student-management?retryWrites=true&w=majority&appName=Cluster0'))
-{
-    console.log('Database is Connected')
-}
+if(mongoose.connect('mongodb+srv://kvallarasu2003:Ammaakka%4016@cluster0.izndm.mongodb.net/student-management?retryWrites=true&w=majority&appName=Cluster0'))
+    {
+        console.log('Database is Connected')
+    }
 
-app.listen(4000, ()=>
+app.listen(4010, ()=>
     {
         console.log('server is connected')
     })
