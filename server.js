@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/app",routerUrl);
 
-mongoose.connect('mongodb://localhost:27017/Student-management', {
+mongoose.connect('mongodb://localhost:127.0.0.1:27017/Student-management', {
     useNewUrlParser: true,       // Avoid deprecation warning for URL parsing
     useUnifiedTopology: true     // Avoid deprecation warning for server discovery and monitoring
 })
