@@ -10,16 +10,10 @@ app.use(express.json());
 app.use(cors());
 app.use("/app",routerUrl);
 
-mongoose.connect('mongodb://localhost:127.0.0.1:27017/Student-management', {
-    useNewUrlParser: true,       // Avoid deprecation warning for URL parsing
-    useUnifiedTopology: true     // Avoid deprecation warning for server discovery and monitoring
-})
-    .then(() => {
-        console.log('Database is Connected');
-    })
-    .catch((error) => {
-        console.error('Database Connection Failed:', error.message);
-    });
+if(mongoose.connect('mongodb+srv://kvallarasu2003:Ammaakka@16@cluster0.izndm.mongodb.net/Student-management?retryWrites=true&w=majority&appName=Cluster0'))
+{
+    console.log('Database is Connected')
+}
 
 app.listen(4000, ()=>
     {
