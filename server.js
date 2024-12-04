@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/app",routerUrl);
 
-if(mongoose.connect('mongodb+srv://kvallarasu2003:Ammaakka%4016@cluster0.izndm.mongodb.net/student-management?retryWrites=true&w=majority&appName=Cluster0'))
+if(mongoose.connect('mongodb+srv://kvallarasu2003:Ammaakka%4016@cluster0.izndm.mongodb.net/student-managements?retryWrites=true&w=majority&appName=Cluster0'))
     {
         console.log('Database is Connected')
     }
