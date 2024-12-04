@@ -1,0 +1,17 @@
+
+POST http://localhost:4010/app/Invoice
+Content-Type: application/json
+
+{
+    "firstName": "ajith",
+    "lastName": "Kumra",
+    "gender": "Male",
+    "age": "23",
+    "dateOfBirth": "03-01-2001",
+    "mobile": "1234567890",
+    "email": "kvallarasu2003@gmail.com",
+    "course": " Full-stack Develepment ",
+    "batch": " Morning Batch-12", 
+    "admissionDate": " 01-12-2001",
+    "fees": "40000"
+}

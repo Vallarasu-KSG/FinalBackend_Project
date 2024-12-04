@@ -1,0 +1,55 @@
+const mongoose = require ('mongoose')
+const registerTemplete = new mongoose.Schema(
+    {
+        firstName:{
+            type:String,
+            require:true,
+        },
+        lastName:{
+            type:String,
+            require:true,
+        },
+        gender:{
+            type:String,
+            require:true,
+        },
+        age:{
+            type:String,
+            require:true,
+        },
+        dateOfBirth:{
+            type:String,
+            require:true,
+        },
+        mobile:{
+            type:String,
+            require:true,
+        },
+        email:{
+            type:String,
+            require:true,
+        },        
+        course:{
+            type:String,
+            require:true,
+        },        
+        batch:{
+            type:String,
+            require:true,
+        },        
+        admissionDate:{
+            type:String,
+            require:true,
+        },        
+        fees:{
+            type:String,
+            require:true,
+        },
+        date:{
+            type:Date,
+            default:Date.now
+        }
+    }
+)
+
+module.exports=mongoose.model("RegisterDetails",registerTemplete)
